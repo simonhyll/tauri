@@ -1,5 +1,13 @@
 # Changelog
 
+## \[1.4.0]
+
+### What's Changed
+
+- [`82169e69`](https://www.github.com/tauri-apps/tauri/commit/82169e69fc904d2c7980534c4479bb6f38259fb4)([#5208](https://www.github.com/tauri-apps/tauri/pull/5208)) Fix parsing `allowlist > http > scope` urls that added a trailing slash which broke matching the incoming requests url.
+- [`29488205`](https://www.github.com/tauri-apps/tauri/commit/2948820579d20dfaa0861c2f0a58bd7737a7ffd1)([#6867](https://www.github.com/tauri-apps/tauri/pull/6867)) Allow specifying custom language files of Tauri's custom messages for the NSIS installer
+- [`e092f799`](https://www.github.com/tauri-apps/tauri/commit/e092f799469ff32c7d1595d0f07d06fd2dab5c29)([#6887](https://www.github.com/tauri-apps/tauri/pull/6887)) Add `nsis > template` option to specify custom NSIS installer template.
+
 ## \[1.3.0]
 
 - Added the `additional_browser_args` option to the window configuration.

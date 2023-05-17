@@ -1,5 +1,11 @@
 # Changelog
 
+## \[1.3.1]
+
+### Dependencies
+
+- Updated to latest `tauri-utils`
+
 ## \[1.3.0]
 
 - Bump minimum supported Rust version to 1.60.

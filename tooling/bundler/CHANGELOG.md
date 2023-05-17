@@ -1,5 +1,20 @@
 # Changelog
 
+## \[1.3.0]
+
+### Enhancements
+
+- [`540ddd4e`](https://www.github.com/tauri-apps/tauri/commit/540ddd4e6a4926c26507a8d06fbe72a5895f8509)([#6906](https://www.github.com/tauri-apps/tauri/pull/6906)) Added Dutch language support to the NSIS bundler.
+- [`b257bebf`](https://www.github.com/tauri-apps/tauri/commit/b257bebf9e478d616690ba1c357dc7f071ea7b31)([#6906](https://www.github.com/tauri-apps/tauri/pull/6906)) Added Japanese language support to the NSIS bundler.
+
+### What's Changed
+
+- [`29488205`](https://www.github.com/tauri-apps/tauri/commit/2948820579d20dfaa0861c2f0a58bd7737a7ffd1)([#6867](https://www.github.com/tauri-apps/tauri/pull/6867)) Allow specifying custom language files of Tauri's custom messages for the NSIS installer
+- [`e092f799`](https://www.github.com/tauri-apps/tauri/commit/e092f799469ff32c7d1595d0f07d06fd2dab5c29)([#6887](https://www.github.com/tauri-apps/tauri/pull/6887)) Add `nsis > template` option to specify custom NSIS installer template.
+- [`21d5eb84`](https://www.github.com/tauri-apps/tauri/commit/21d5eb84ab2372466a3254e656e2ec9b346a2db7)([#6965](https://www.github.com/tauri-apps/tauri/pull/6965)) Added Persian language support to the NSIS bundler.
+- [`3cc295e9`](https://www.github.com/tauri-apps/tauri/commit/3cc295e99762d39a4a118db9b1f811f0503fe9e1)([#6928](https://www.github.com/tauri-apps/tauri/pull/6928)) -   Fix NSIS installer not using the old installation path as a default when using `perMachine` or `currentUser` install modes.
+  - NSIS will now respect the `/D` flag which used to set the installation directory from command line.
+
 ## \[1.2.1]
 
 - Correctly escape XML for resource files in WiX bundler.

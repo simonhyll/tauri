@@ -1,5 +1,14 @@
 # Changelog
 
+## \[1.4.0]
+
+### What's Changed
+
+- [`fd3b5a16`](https://www.github.com/tauri-apps/tauri/commit/fd3b5a16b13d62f62c850e68763401916dde26f2)([#6954](https://www.github.com/tauri-apps/tauri/pull/6954)) Fix building with a custom cargo profile
+- [`29488205`](https://www.github.com/tauri-apps/tauri/commit/2948820579d20dfaa0861c2f0a58bd7737a7ffd1)([#6867](https://www.github.com/tauri-apps/tauri/pull/6867)) Allow specifying custom language files of Tauri's custom messages for the NSIS installer
+- [`e092f799`](https://www.github.com/tauri-apps/tauri/commit/e092f799469ff32c7d1595d0f07d06fd2dab5c29)([#6887](https://www.github.com/tauri-apps/tauri/pull/6887)) Add `nsis > template` option to specify custom NSIS installer template.
+- [`2659ca1a`](https://www.github.com/tauri-apps/tauri/commit/2659ca1ab4799a5bda65c229c149e98bd01eb1ee)([#6900](https://www.github.com/tauri-apps/tauri/pull/6900)) Add `rustls` as default Cargo feature.
+
 ## \[1.3.1]
 
 - Correctly escape XML for resource files in WiX bundler.

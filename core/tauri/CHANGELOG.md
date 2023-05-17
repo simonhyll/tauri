@@ -1,5 +1,16 @@
 # Changelog
 
+## \[1.4.0]
+
+### What's Changed
+
+- [`7c237209`](https://www.github.com/tauri-apps/tauri/commit/7c237209207cd2938df660b6fd87d3b7d728bd03)([#6546](https://www.github.com/tauri-apps/tauri/pull/6546)) Added `tauri::VERSION` const to get Tauri's version from Rust.
+- [`aecf1469`](https://www.github.com/tauri-apps/tauri/commit/aecf14690947d109745b4ad823a3e8f4338de47a)([#6889](https://www.github.com/tauri-apps/tauri/pull/6889)) Fix IPC failing after a failed navigation to an external URL.
+- [`3f35b452`](https://www.github.com/tauri-apps/tauri/commit/3f35b452637ef1c794a423f1eda62a15d2ddaf42)([#4080](https://www.github.com/tauri-apps/tauri/pull/4080)) Fix `WindowBuilder::on_navigation` handler not registered properly.
+- [`3700793a`](https://www.github.com/tauri-apps/tauri/commit/3700793a2f1ea3686b1889c345d73007bb622a29)([#6934](https://www.github.com/tauri-apps/tauri/pull/6934)) Emit `UPTODATE` update status to javascript when the updater server returns status code `204`
+- [`441f9646`](https://www.github.com/tauri-apps/tauri/commit/441f96465488a4f8a5731cc51b8ac97b685898c7)([#5491](https://www.github.com/tauri-apps/tauri/pull/5491)) Add `MenuHandle::try_get_item` and `SystemTrayHandle::try_get_item` which returns a `Option` instead of panicking.
+- [`d2710e9d`](https://www.github.com/tauri-apps/tauri/commit/d2710e9d2e8fd93975ef6494512370faa8cb3b7e)([#6944](https://www.github.com/tauri-apps/tauri/pull/6944)) Unpin `time`, `ignore`, `winnow`, and `ignore` crate versions. Developers now have to pin crates if needed themselves. A list of crates that need pinning to adhere to Tauri's MSRV will be visible in Tauri's GitHub workflow: https://github.com/tauri-apps/tauri/blob/dev/.github/workflows/test-core.yml#L85.
+
 ## \[1.3.0]
 
 - Added the `additional_browser_args` option when creating a window.
