@@ -1,5 +1,11 @@
 # Changelog
 
+## \[2.0.0-alpha.10]
+
+- [`3f4c4ce8`](https://www.github.com/tauri-apps/tauri/commit/3f4c4ce88b071e4e59f03887beb4dfe76f66e11b)([#7028](https://www.github.com/tauri-apps/tauri/pull/7028)) Fix `--split-per-abi` not building any targets unless specified by `--target` flag.
+- [`aa6c9164`](https://www.github.com/tauri-apps/tauri/commit/aa6c9164e63b5316d690f25b1c118f1b12310570)([#7007](https://www.github.com/tauri-apps/tauri/pull/7007)) Don't build library files when building desktop targets.
+- [`b0f94775`](https://www.github.com/tauri-apps/tauri/commit/b0f947752a315b7b89c5979de50157f997f1dd6e)([#7008](https://www.github.com/tauri-apps/tauri/pull/7008)) Added `migrate` command.
+
 ## \[2.0.0-alpha.9]
 
 - [`19cd0e49`](https://www.github.com/tauri-apps/tauri/commit/19cd0e49603ad3500cd2180bfa16e1649e3a771a)([#6811](https://www.github.com/tauri-apps/tauri/pull/6811)) Add `key.properties` file to android's `.gitignore`.
