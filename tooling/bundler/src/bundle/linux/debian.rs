@@ -42,6 +42,8 @@ use std::{
   path::{Path, PathBuf},
 };
 
+use nix::unistd::chown;
+
 #[derive(PartialEq, Eq, PartialOrd, Ord)]
 pub struct DebIcon {
   pub width: u32,
@@ -95,16 +97,45 @@ pub fn bundle_project(settings: &Settings) -> crate::Result<Vec<PathBuf>> {
   create_file_with_data(&debian_binary_path, "2.0\n")
     .with_context(|| "Failed to create debian-binary file")?;
 
+  // Fix permissions
+  for entry in WalkDir::new(&data_dir) {
+    let output = std::process::Command::new("sudo")
+      .arg("chown")
+      .arg("root:root")
+      .arg(entry?.path().to_str().unwrap())
+      .output()
+      .expect("failed to execute chown command");
+    if output.status.success() {
+      println!("Changed ownership successfully");
+    } else {
+      panic!("Failed to change ownership");
+    }
+  }
+  for entry in WalkDir::new(&control_dir) {
+    let output = std::process::Command::new("sudo")
+      .arg("chown")
+      .arg("root:root")
+      .arg(entry?.path().to_str().unwrap())
+      .output()
+      .expect("failed to execute chown command");
+    if output.status.success() {
+      println!("Changed ownership successfully");
+    } else {
+      panic!("Failed to change ownership");
+    }
+  }
+
   // Apply tar/gzip/ar to create the final package file.
   let control_tar_gz_path =
     tar_and_gzip_dir(control_dir).with_context(|| "Failed to tar/gzip control directory")?;
   let data_tar_gz_path =
-    tar_and_gzip_dir(data_dir).with_context(|| "Failed to tar/gzip data directory")?;
+    tar_and_gzip_dir(&data_dir).with_context(|| "Failed to tar/gzip data directory")?;
   create_archive(
     vec![debian_binary_path, control_tar_gz_path, data_tar_gz_path],
     &package_path,
   )
   .with_context(|| "Failed to create package archive")?;
+
   Ok(vec![package_path])
 }
 
