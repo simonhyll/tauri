@@ -13,7 +13,6 @@ android {
         manifestPlaceholders["usesCleartextTraffic"] = "false"
         applicationId = "{{reverse-domain app.domain}}.{{snake-case app.name}}"
         minSdk = {{android.min-sdk-version}}
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
