@@ -20,7 +20,7 @@ use serde::{
 use serde_json::Value as JsonValue;
 use serde_with::skip_serializing_none;
 use url::Url;
-
+x
 use std::{
   collections::HashMap,
   fmt::{self, Display},
@@ -763,6 +763,7 @@ pub struct NsisConfig {
   /// !macro NSIS_HOOK_POSTUNINSTALL_
   ///   MessageBox MB_OK "PostUninstall"
   /// !macroend
+  ///
   /// ```
   #[serde(alias = "installer-hooks")]
   pub installer_hooks: Option<PathBuf>,
